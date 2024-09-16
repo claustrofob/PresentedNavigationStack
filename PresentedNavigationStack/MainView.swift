@@ -16,12 +16,12 @@ struct MainView: View {
         .navigationTitle("Some title")
         .sheet(isPresented: $isPresentedSheet) {
             NavigationStack {
-                PresentedView()
+                PresentedView(title: "Presented sheet")
             }
         }
         .customPresentation(isPresented: $isPresentedCustom) {
             NavigationStack {
-                PresentedView()
+                PresentedView(title: "Presented custom")
             }
         }
     }

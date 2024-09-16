@@ -4,14 +4,17 @@ struct PresentedView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.close) var close
     
+    let title: String
+    
     var body: some View {
-        Text("Presented page")
-            .navigationTitle("Presented page")
+        Text(title)
+            .navigationTitle(title)
             .toolbar {
-                Button("Button") {
+                Button(title) {
                     dismiss()
                     close()
                 }
+                .tint(.pink)
             }
     }
 }
