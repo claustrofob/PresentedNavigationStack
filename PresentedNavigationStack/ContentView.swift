@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isPresented = false
-    
     var body: some View {
         NavigationStack {
             MainView()
